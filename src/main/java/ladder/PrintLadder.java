@@ -18,8 +18,8 @@ public class PrintLadder {
 	public void isTruePrint(boolean ladder) { // true면 "-" false면 " "모양을 출력한다.
 		if (ladder) {
 			System.out.print("-");
-		} else {
-			System.out.print("  ");
+			return;
 		}
+		System.out.print("  ");
 	}
 }

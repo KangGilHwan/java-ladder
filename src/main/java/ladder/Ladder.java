@@ -1,14 +1,13 @@
 package ladder;
 
-public class LadderMain {
+public class Ladder {
 	public static void main(String args[]) {
-		GetLadder number = new GetLadder();
-		LadderRide ride = new LadderRide();
 		PrintLadder draw = new PrintLadder();
 
-		int manNum = number.getManNum();
-		int ladderNum = number.getLadderNum();
+		int manNum = ImpormationLadder.getManNum();
+		int ladderNum = ImpormationLadder.getLadderNum();
 
+		LadderRiding ride = new LadderRiding(ladderNum, manNum);
 		boolean[][] ladder = ride.makeAllLadder(ladderNum, manNum);
 		draw.printLadder(ladder);
 	}
