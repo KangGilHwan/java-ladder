@@ -10,12 +10,10 @@ public class ImpormationLadder {
 	static Scanner input = new Scanner(System.in);
 
 	public static ArrayList<String> getNames() {
-		ArrayList<String> names = new ArrayList<String>();
 		System.out.println("참여할 사람이름을 적어주세요. (이름은 쉼표(,)로 구분하세요)");
 		try {
 			String inputName = input.nextLine();
-			names = new ArrayList<String>(Arrays.asList(inputName.split(",")));
-			return names;
+			return new ArrayList<String>(Arrays.asList(inputName.split(",")));
 		} catch (InputMismatchException ime) {
 			System.out.println("문자열만 입력해주세요");
 			return getNames();

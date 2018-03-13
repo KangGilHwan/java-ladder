@@ -13,10 +13,10 @@ public class PrintLadder {
 	}
 
 	public void printOneLadder(Line ladder) { // Ladder Line 하나를 출력한다.
-		ArrayList<Boolean> laprint = ladder.getLine();
-		for (int j = 0; j < laprint.size(); j++) {
+		ArrayList<Boolean> allLadder = ladder.getLine();
+		for (int j = 0; j < allLadder.size(); j++) {
 			System.out.print("|");
-			isTruePrint(laprint.get(j));
+			isTruePrint(allLadder.get(j));
 		}
 		System.out.println("|");
 	}
