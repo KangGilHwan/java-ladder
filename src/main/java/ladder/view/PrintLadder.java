@@ -36,4 +36,33 @@ public class PrintLadder {
 		}
 		return "     ";
 	}
+
+	public void printLastLineNames(ArrayList<String> inputResult) { // 이름을 출력한다.
+		for (String name : inputResult) {
+			System.out.printf("%5s ", name);
+		}
+		System.out.println();
+	}
+	//마지막 결과값을 출력하는 메소드
+	public void printAllResult(ArrayList<String> finalResult, ArrayList<String> inputResult) {
+		String inputName = ImpormationLadder.getLadderResult();
+		System.out.println("실행결과");
+		if (inputName.equals("all")) {
+			for (int i = 0; i < finalResult.size(); i++) {
+				System.out.println(finalResult.get(i) + " : " + inputResult.get(i));
+			}
+		} else {
+			printOneResult(finalResult, inputResult, inputName);
+			printAllResult(finalResult, inputResult);
+		}
+	}
+
+	public void printOneResult(ArrayList<String> finalResult, ArrayList<String> inputResult, String inputName) {
+		try {
+			System.out.println(inputResult.get(finalResult.indexOf(inputName)));
+			printAllResult(finalResult, inputResult);
+		} catch (Exception e) {
+			System.out.println("이름이 다릅니다. 다시 입력해주세요.");
+		}
+	}
 }

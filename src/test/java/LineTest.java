@@ -15,7 +15,7 @@ public class LineTest {
 	@Test
 	public void checkLineZeroTest() {
 		Line test = new Line(0);
-		
+
 		assertEquals(false, test.checkLine(0, false));
 	}
 
@@ -23,7 +23,7 @@ public class LineTest {
 	public void checkLineBeforeindexTrueTest() {
 		// 전 인덱스에 사다리가 있으면 false가 나와야한다.
 		Line test2 = new Line(true);
-		
+
 		assertEquals(false, test2.checkLine(1, true));
 	}
 

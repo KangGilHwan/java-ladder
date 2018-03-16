@@ -22,6 +22,13 @@ public class ImpormationLadder {
 		}
 	}
 
+	public static ArrayList<String> getResult() {
+		System.out.println("실행 결과를 입력하세요. (결과는 쉼표(,)로 구분하세요)");
+		String inputResult = input.nextLine();
+		ArrayList<String> results = new ArrayList<>(Arrays.asList(inputResult.split(",")));
+		return results;
+	}
+
 	public static int getLadderNum() {
 		System.out.println("최대 사다리 높이는 몇 개인가?");
 		try {
@@ -31,5 +38,12 @@ public class ImpormationLadder {
 			System.out.println("정수만 입력해주세요");
 			return getLadderNum();
 		}
+	}
+
+	public static String getLadderResult() {
+		Scanner in = new Scanner(System.in);
+		System.out.println("결과를 보고 싶은 사람은?");
+		String inputName = in.nextLine();
+		return inputName;
 	}
 }
